@@ -240,7 +240,7 @@ export default function StartupForm() {
           <div data-color-mode="dark" className={`mt-1 ${state.fieldErrors?.pitch ? 'ring-2 ring-red-500/50 rounded-xl' : ''}`}>
             <MDEditor
               value={pitch}
-              onChange={(value) => {
+              onChange={(value: string | undefined) => {
                 setPitch(value || '');
                 const pitchInput = document.querySelector('input[name="pitch"]') as HTMLInputElement;
                 if (pitchInput) {
